@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 12 Jyotirlingas of India</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --saffron: #FF9933;
+            --saffron-light: #FFB366;
+            --white: #FFFFFF;
+            --green: #138808;
+            --green-light: #34A853;
+            --blue: #000080;
+            --gold: #D4AF37;
+            --gold-light: #E6C86E;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --label-color: #8B4513; /* Brown color for labels */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Header Section with Gradient */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 12px var(--shadow);
+            position: relative;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        header h1 {
+            font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(30deg, 
+                var(--saffron) 0%, var(--saffron) 33%, 
+                var(--white) 33%, var(--white) 66%, 
+                var(--green) 66%, var(--green) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        header p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        /* Carousel Container */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Cards Carousel */
+        .cards-carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Card Styles */
+        .card {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            perspective: 1000px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .card.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* Card Image */
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Card Text Overlay */
+        .card-text-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 2rem 1.5rem 1.5rem;
+        }
+
+        .card h2 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Icons Container */
+        .icons-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 90px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #4285F4;
+            font-size: 1.4rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            text-decoration: none;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+        }
+
+        .map-icon {
+            background-color: #FFFFFF;
+        }
+
+        .link-icon {
+            background-color: #FFFFFF;
+        }
+
+        .youtube-icon {
+            background-color: #FFFFFF;
+            color: #4285F4;
+        }
+
+        .vr-icon {
+            background-color: #FFFFFF;
+        }
+
+        /* Back Card Content */
+        .back-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 141, 1) 27%, rgba(237, 221, 83, 1) 81%);
+            color: var(--dark-gray);
+        }
+
+        .back-content h2 {
+            font-family: 'Cinzel', Georgia, 'Times New Roman', serif;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 2.2rem;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .back-content h3 {
+            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+            color: var(--dark-gray);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .about-text {
+            background: rgba(255,255,255,0.8);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 0.5rem;
+            margin-left: 90px; /* keep within nav buttons */
+            margin-right: 90px; /* keep within nav buttons */
+            font-size: 1rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            overflow-y: auto;
+            opacity: 0; /* prepare for animation */
+            transform: translateY(10px) scale(0.98);
+            filter: blur(6px);
+            will-change: opacity, transform, filter;
+        }
+
+        .description {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .about-text ul {
+            padding-left: 1.5rem;
+        }
+
+        .about-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Style for labels before colons */
+        .label {
+            color: var(--label-color);
+            font-weight: 600;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-content {
+            background-color: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .popup-header h3 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        .popup-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.2s;
+        }
+
+        .popup-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .popup-body {
+            padding: 1.5rem;
+            max-height: calc(80vh - 80px);
+            overflow-y: auto;
+        }
+
+        .popup-body iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .popup-body p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .popup-body a {
+            color: #4285F4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .popup-body a:hover {
+            text-decoration: underline;
+        }
+
+        .popup-image {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 1rem auto;
+            position: relative;
+            display: block;
+            width: fit-content;
+        }
+
+        .zoom-controls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .zoom-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+            margin-bottom: 10px;
+        }
+
+        .zoom-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .zoom-btn:hover {
+            cursor: pointer;
+        }
+
+        .zoom-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.1);
+        }
+
+        .popup-image.zoomed {
+            transform: scale(1.5);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+            cursor: grab;
+        }
+
+        .popup-image.dragging {
+            cursor: grabbing;
+            transition: none;
+        }
+
+        .popup-image.zoomable {
+            cursor: grab;
+        }
+
+        /* Navigation Buttons */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: #4285F4;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-btn:hover {
+            background: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Animation for about text when card is flipped */
+        .card.flipped .about-text {
+            animation: aboutReveal 800ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+        }
+
+        @keyframes aboutReveal {
+            0% { opacity: 0; transform: translateY(10px) scale(0.98); filter: blur(6px); }
+            60% { opacity: 1; transform: translateY(0) scale(1); filter: blur(1.5px); }
+            100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+        }
+
+        /* Respect reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .card.flipped .about-text { animation: none; opacity: 1; transform: none; filter: none; }
+            .about-text { opacity: 1; transform: none; filter: none; }
+        }
+
+        .prev-btn {
+            left: 20px;
+        }
+
+        .next-btn {
+            right: 20px;
+        }
+
+        /* Dots Indicator */
+        .dots-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+            gap: 10px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dot.active {
+            background: var(--saffron);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--white);
+            margin-top: 3rem;
+            font-weight: 500;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .carousel-container {
+                height: 500px;
+            }
+            
+            .card h2 {
+                font-size: 1.8rem;
+            }
+            
+            .back-content h2 {
+                font-size: 1.8rem;
+            }
+            
+            .about-text {
+                margin-left: 70px; /* smaller nav buttons on mobile */
+                margin-right: 70px;
+                padding: 1rem;
+            }
+
+            .icons-container {
+                margin-left: 70px;
+                margin-right: 70px;
+            }
+            
+            .nav-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .prev-btn {
+                left: 10px;
+            }
+            
+            .next-btn {
+                right: 10px;
+            }
+
+            .popup-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Gradient -->
+    <header>
+        <div class="header-content">
+            <h1>The 12 Jyotirlingas of India</h1>
+            <p>Discover the sacred abodes of Lord Shiva, the Jyotirlingas, which are revered pilgrimage sites across India. Each represents the infinite nature of Shiva and holds immense spiritual significance.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="carousel-container">
+            <div class="cards-carousel" id="cards-carousel">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <button class="nav-btn prev-btn" id="prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn next-btn" id="next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        
+        <!-- Dots Indicator -->
+        <div class="dots-container" id="dots-container">
+            <!-- Dots will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>The 12 Jyotirlingas of India | A Spiritual Journey</p>
+    </footer>
+
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3 id="popup-title">Popup Title</h3>
+                <button class="popup-close" id="popup-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="popup-body" id="popup-body">
+                <!-- Popup content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Set your Google Maps Embed API key to render Street View inside the popup iframe
+        // Get a key at https://developers.google.com/maps/documentation/embed/get-api-key
+        const GOOGLE_MAPS_EMBED_API_KEY = ""; // TODO: paste your API key here
+
+        // Jyotirlingas data with Google Street View coordinates and YouTube videos
+        const jyotirlingas = [
+            {
+                id: 1,
+                name: "Somnath, Gujarat",
+                image: "https://www.trawell.in/admin/images/upload/894169759Somnath_Somnath_Temple_Main.jpg",
+                popupImage: "Images/somnath_map.png",
+                mapLink: "https://maps.app.goo.gl/2hvXo6ZqeLZGH1sz9",
+                websiteLink: "https://somnath.org/",
+                youtubeLink: "https://www.youtube.com/embed/IK4k2eyjjRw?si=Qr7oFIdQCJTZgYPy",
+                streetView: "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=20.8880,70.4010",
+                about: `
+                    <div class="description">The Somnath Temple is one of the oldest and most revered pilgrimage sites in India, located on the western coast of Gujarat. It holds the distinction of being the first among the twelve Jyotirlingas and has a rich history of destruction and reconstruction, symbolizing the resilience of faith.</div>
+                    <ul>
+                        <li><span class="label">Known as:</span> the <b>first</b> Jyotirlinga, located on the Saurashtra coast.</li>
+                        <li><span class="label">History:</span> Destroyed and rebuilt <b>17 times</b>, a symbol of resilience.</li>
+                        <li><span class="label">Architecture:</span> <b>Chalukya-style</b>, facing the Arabian Sea.</li>
+                        <li><span class="label">Festival:</span> <b>Maha Shivaratri</b> is celebrated grandly here.</li>
+                        <li><span class="label">Interesting fact:</span> It is said to be built by the <b>Moon God (Soma)</b> after being freed from a curse.</li>
+                    </ul>`
+            },
+            {
+                id: 2,
+                name: "Mallikarjuna, Andhra Pradesh",
+                image: "https://weddingvyapar.com/wp-content/uploads/2024/06/Malikaarjun.png",
+                popupImage: "Images/mallikarjuna_map.png",
+                mapLink: "https://maps.google.com/?q=Mallikarjuna+Temple+Andhra+Pradesh",
+                websiteLink: "https://srisailam.org/",
+                youtubeLink: "https://www.youtube.com/embed/rfppvswfMyc?si=7MLbZCOuButFU-Z9",
+                streetView: "https://maps.app.goo.gl/cJNw5GPVH6khfnvR9",
+                about: `
+                    <div class="description">Perched on the scenic Srisailam hills overlooking the Krishna River, the Mallikarjuna Temple is often referred to as the 'Kailash of the South'. This ancient shrine is unique for housing both Shiva and Parvati, making it a significant site for Shakti worship as well.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Situated on <b>Srisailam hills</b> beside river Krishna.</li>
+                        <li><span class="label">Nickname:</span> Called <b>Kailash of the South</b>.</li>
+                        <li><span class="label">Architecture:</span> <b>Dravidian style</b>, with grand gopurams (gateways).</li>
+                        <li><span class="label">Festivals:</span> <b>Brahmotsavam</b>, <b>Maha Shivaratri</b>, and <b>Dasara</b>.</li>
+                        <li><span class="label">Special:</span> One of the rare temples where <b>Shiva and Parvati are both worshipped together</b>.</li>
+                    </ul>`
+            },
+            {
+                id: 3,
+                name: "Mahakaleshwar, Madhya Pradesh",
+                image: "https://media.assettype.com/themooknayak-en%2F2024-04%2F00961b8b-26f7-4e4e-8821-9c012a6cca5d%2FPM_Modi_to_travel_Shree_Mahakaleshwar_Temple_in_Ujjain_historical_importance_of_uJjain_why_avantika_.jpg?w=1200&auto=format%2Ccompress&fit=max",
+                popupImage: "Images/mahakaleshwar_map.png",
+                mapLink: "https://maps.app.goo.gl/rSvrFqKWYU3chEdy8",
+                websiteLink: "https://shrimahakaleshwar.com/",
+                youtubeLink: "https://www.youtube.com/embed/IJZjnWXQnXc?si=l2i1VHfY6I8kaNS4",
+                streetView: "https://maps.app.goo.gl/g6HscD5MGWXymV5w5",
+                about: `
+                    <div class="description">Located in the ancient city of Ujjain, the Mahakaleshwar Temple is one of the most powerful Jyotirlingas, known for its unique south-facing idol. The temple is famous for its Bhasma Aarti, a ritual performed with sacred ashes, believed to grant liberation from the cycle of birth and death.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located in <b>Ujjain</b>, one of India's holiest cities.</li>
+                        <li><span class="label">Unique:</span> Only Jyotirlinga that is <b>south-facing</b>.</li>
+                        <li><span class="label">Architecture:</span> Maratha-style with Bhumija and Chalukya influences.</li>
+                        <li><span class="label">Famous for:</span> the <b>Bhasma Aarti</b>, performed daily with sacred ash.</li>
+                        <li><span class="label">Festivals:</span> <b>Kumbh Mela (Simhastha)</b>, Maha Shivaratri.</li>
+                    </ul>`
+            },
+            {
+                id: 4,
+                name: "Omkareshwar, Madhya Pradesh",
+                image: "https://www.trawell.in/admin/images/upload/127608564Omkareshwar_Temple.jpg",
+                popupImage: "Images/omkareshwar_map.png",
+                mapLink: "https://maps.app.goo.gl/GEPojBHfF3C3L8A19",
+                websiteLink: "https://shriomkareshwar.org/",
+                youtubeLink: "https://www.youtube.com/embed/DSlX_4u6weQ?si=jFrPBCEB2_Lx_6Aq",
+                streetView: "https://maps.app.goo.gl/F85SiSfMtdDjcbyM8",
+                about: `
+                    <div class="description">Situated on an island in the Narmada River shaped like the sacred 'Om' symbol, Omkareshwar Temple offers a unique spiritual experience. The temple complex actually houses two Jyotirlingas - Omkareshwar and Amareshwar - making it doubly sacred for devotees.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located on an <b>island shaped like the sacred Om (ॐ)</b> on the Narmada River.</li>
+                        <li><span class="label">Architecture:</span> Blend of <b>Nagara style</b> and river-island setting.</li>
+                        <li><span class="label">Special:</span> Two Jyotirlingas — <b>Omkareshwar</b> and <b>Amaleshwar</b>.</li>
+                        <li><span class="label">Festivals:</span> <b>Narmada Jayanti</b>, Maha Shivaratri.</li>
+                        <li><span class="label">Interesting fact:</span> Devotees often perform a <b>parikrama (circumambulation)</b> of the entire island.</li>
+                    </ul>`
+            },
+            {
+                id: 5,
+                name: "Kedarnath, Uttarakhand",
+                image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Kedarnath_Temple_in_Rainy_season.jpg/1280px-Kedarnath_Temple_in_Rainy_season.jpg",
+                popupImage: "Images/kedarnath_map.png",
+                mapLink: "https://maps.app.goo.gl/sS2GQ855gXCBG7Xc8",
+                websiteLink: "https://badrinath-kedarnath.gov.in/",
+                youtubeLink: "https://www.youtube.com/embed/NcW7lqTSiv0?si=Ka0gYoWVKJyAp4vH",
+                streetView: "https://maps.app.goo.gl/zq576fqzYGSw7aHbA",
+                about: `
+                    <div class="description">Nestled in the majestic Himalayas at an altitude of 3,583 meters, Kedarnath Temple is one of the most challenging yet spiritually rewarding Jyotirlingas to visit. Accessible only for six months each year due to heavy snowfall, this temple is believed to have been established by the Pandavas to atone for their sins after the Kurukshetra war.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Nestled in the <b>Himalayas</b> at 3,583 m altitude.</li> 
+                        <li><span class="label">Accessibility:</span> Accessible only <b>six months a year</b> due to snow.</li>
+                        <li><span class="label">Architecture:</span> Stone temple built by Adi Shankaracharya near older Pandava shrine.</li>
+                        <li><span class="label">Festivals:</span> <b>Badri-Kedar Utsav</b>, <b>Maha Shivaratri</b>.</li>
+                        <li><span class="label">Special:</span> Part of <b>Char Dham Yatra</b>.</li>
+                        <li><span class="label">Interesting fact:</span> Linked to the Pandavas, who sought Lord Shiva's forgiveness here.</li>
+                    </ul>`
+            },
+            {
+                id: 6,
+                name: "Bhimashankar, Maharashtra",
+                image: "https://www.ahospitalityclub.com/wp-content/uploads/2022/05/bhimashankar-jyotirlinga-temple.jpg",
+                popupImage: "Images/bhimashankar_map.png",
+                mapLink: "https://maps.app.goo.gl/8UfuGEFHnB3G1GYVA",
+                websiteLink: "https://bhimashankar.in/",
+                youtubeLink: "https://www.youtube.com/embed/rJarw3c_1Zw?si=n73SvQ-lP1aeY8oz",
+                streetView: "https://maps.app.goo.gl/GbNgVxh9KMvgmbn98",
+                about: `
+                    <div class="description">Tucked away in the lush Sahyadri hills of Maharashtra, Bhimashankar Temple is surrounded by dense forests that are now protected as a wildlife sanctuary. This remote temple is believed to mark the spot where Lord Shiva defeated the demon Tripurasura, and its serene location makes it a perfect retreat for spiritual seekers.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Situated in the <b>Sahyadri hills</b>, surrounded by dense forest.</li>
+                        <li><span class="label">Legend:</span> Believed to be the site where Shiva defeated demon Tripurasura.</li>
+                        <li><span class="label">Architecture:</span> Nagara style with wooden carvings.</li>
+                        <li><span class="label">Festivals:</span> <b>Maha Shivaratri</b>, <b>Kartik Poornima</b>.</li>
+                        <li><span class="label">Special:</span> Declared a <b>Wildlife Sanctuary</b> – home to the Giant Squirrel (state animal).</li>
+                    </ul>`
+            },
+            {
+                id: 7,
+                name: "Kashi Vishwanath, Uttar Pradesh",
+                image: "https://shrikashidham.com/wp-content/uploads/2023/08/1-3-2048x1306.jpg",
+                popupImage: "Images/kashi_map.png",
+                mapLink: "https://maps.app.goo.gl/6isd5xmumEA3pSss6",
+                websiteLink: "https://shrikashivishwanath.org/",
+                youtubeLink: "https://www.youtube.com/embed/sVmg3ICkNxg?si=n6emz8bqBcgRByXy",
+                streetView: "https://maps.app.goo.gl/6YqmjdVZc7AnFDSE6",
+                about: `
+                    <div class="description">Situated in the spiritual capital of India, Varanasi, the Kashi Vishwanath Temple is considered the holiest of all Shiva temples. It is believed that a glimpse of the Jyotirlinga here and a dip in the sacred Ganges grants liberation (Moksha). The temple's golden spire is a magnificent sight that dominates the Varanasi skyline.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located in <b>Varanasi</b>, the city of Lord Shiva.</li>
+                        <li><span class="label">Architecture:</span> Features <b>gold-plated spire and dome</b>, rebuilt by Ahilyabai Holkar.</li>
+                        <li><span class="label">Festivals:</span> <b>Maha Shivaratri</b>, <b>Dev Deepawali</b> on Ganga ghats.</li>
+                        <li><span class="label">Special:</span> Belief that <b>dying in Kashi grants liberation (Moksha)</b>.</li>
+                        <li><span class="label">Interesting fact:</span> The temple is mentioned in the <b>Skanda Purana</b> as the holiest of all shrines.</li>
+                    </ul>`
+            },
+            {
+                id: 8,
+                name: "Trimbakeshwar, Maharashtra",
+                image: "https://s7ap1.scene7.com/is/image/incredibleindia/1-trimbakeshwar-nashik-maharashtra-attr-hero?qlt=82&ts=1726669890287",
+                popupImage: "Images/trimbakeshwar_map.png",
+                mapLink: "https://maps.app.goo.gl/PzwV1s8zL6m8mAmw6",
+                websiteLink: "https://trimbakeshwar.org/",
+                youtubeLink: "https://www.youtube.com/embed/CbhESItgZ54?si=JfWX_vMmbdOFBzOu",
+                streetView: "https://maps.app.goo.gl/ihWhKBMgwDpDko5a9",
+                about: `
+                    <div class="description">Located near Nashik, Trimbakeshwar Temple is unique for housing a Jyotirlinga with three faces representing Brahma, Vishnu, and Shiva. The temple marks the source of the Godavari River, India's second longest river, and is an important site for performing ancestral rituals.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located near <b>Nashik</b>, at the origin of <b>Godavari River</b>.</li>
+                        <li><span class="label">Unique:</span> The lingam has <b>three faces</b> symbolizing Brahma, Vishnu, and Shiva.</li>
+                        <li><span class="label">Architecture:</span> Black stone structure built by Peshwa Balaji Baji Rao.</li>
+                        <li><span class="label">Festivals:</span> <b>Kumbh Mela</b>, Maha Shivaratri.</li>
+                        <li><span class="label">Interesting fact:</span> Important center for <b>Narayan Nagbali rituals</b> performed to free ancestral souls.</li>
+                    </ul>`
+            },
+            {
+                id: 9,
+                name: "Baidyanath Dham, Jharkhand",
+                image: "https://upload.wikimedia.org/wikipedia/commons/9/90/Baba_Baidyanath_Jyotirlinga_Temple.jpg",
+                popupImage: "Images/baidyanath_map.png",
+                mapLink: "https://maps.app.goo.gl/q8UwSRrYdLSSA7pQ6",
+                websiteLink: "https://babadham.org/",
+                youtubeLink: "https://www.youtube.com/embed/e6-N7-Ae8f0?si=uIFl5aAnr4T9nfPG",
+                streetView: "https://maps.app.goo.gl/oSzqTWW6dRydxZ7A6",
+                about: `
+                    <div class="description">Also known as Vaidyanath, this Jyotirlinga in Deoghar is associated with healing powers, with Shiva worshipped here as the 'Divine Physician'. According to legend, Ravana offered his ten heads to Shiva at this site, and the temple complex consists of 21 additional temples alongside the main shrine.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located in <b>Deoghar</b>, also called Vaidyanath.</li>
+                        <li><span class="label">Legend:</span> Believed that Ravana worshipped Shiva here, offering his ten heads.</li>
+                        <li><span class="label">Architecture:</span> Complex of <b>22 temples</b> with central Jyotirlinga shrine.</li>
+                        <li><span class="label">Festivals:</span> <b>Shravani Mela</b> attracts millions of Kanwariyas.</li>
+                        <li><span class="label">Special:</span> Associated with <b>healing powers</b>; Shiva as the "Divine Physician."</li>
+                    </ul>`
+            },
+            {
+                id: 10,
+                name: "Nageshwar, Gujarat",
+                image: "https://s7ap1.scene7.com/is/image/incredibleindia/nageshwar-Jyotirlinga-temple-02-attr-hero?qlt=82&ts=1726734769619",
+                popupImage: "Images/nageshwar_map.png",
+                mapLink: "https://maps.google.com/?q=Nageshwar+Temple+Gujarat",
+                websiteLink: "https://nageshwarjyotirlinga.com/",
+                youtubeLink: "https://www.youtube.com/embed/mGvOX_W4pk8?si=b-Q97fzXAxIA_PWs",
+                streetView: "https://maps.app.goo.gl/2FcFBJgE6t6SbDQq6",
+                about: `
+                    <div class="description">Located near Dwarka, the Nageshwar Temple is believed to protect devotees from snake bites and poison. The temple features a massive 25-meter tall statue of Shiva and a large lingam that is said to be self-manifested (Swayambhu). Its coastal location adds to its serene atmosphere.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located near <b>Dwarka</b>, also called <b>Darukavana</b> in scriptures.</li>
+                        <li><span class="label">Belief:</span> Believed to protect devotees from <b>snake bites and poison</b>.</li>
+                        <li><span class="label">Architecture:</span> Simple stone carvings with tall shikhara.</li>
+                        <li><span class="label">Festivals:</span> <b>Nag Panchami</b> and Maha Shivaratri attract large gatherings.</li>
+                        <li><span class="label">Interesting fact:</span> The lingam here is <b>self-manifested (Swayambhu)</b>.</li>
+                    </ul>`
+            },
+            {
+                id: 11,
+                name: "Rameshwaram, Tamil Nadu",
+                image: "https://s3.india.com/wp-content/uploads/2024/09/Rameswaram-rivers.jpg?impolicy=Medium_Widthonly&w=800&h=541",
+                popupImage: "Images/rameswaram_map.png",
+                mapLink: "https://maps.app.goo.gl/kEQaUbZaL1AM7G6s7",
+                websiteLink: "https://rameswaramtemple.tn.gov.in/",
+                youtubeLink: "https://www.youtube.com/embed/JUtKlIGxASo?si=U1kdyCDkl-YI54hd",
+                streetView: "https://maps.app.goo.gl/289ZWunbodeyNYSH8",
+                about: `
+                    <div class="description">Situated on the island of Rameswaram in Tamil Nadu, this temple is famous for its magnificent corridors with over 1,200 pillars. According to legend, Lord Rama established this Jyotirlinga before crossing to Lanka to rescue Sita. The temple's 22 sacred wells (Teerthams) are believed to have curative properties.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Situated on <b>Rameswaram Island</b>, near the sea.</li>
+                        <li><span class="label">Legend:</span> Believed to be established by <b>Lord Rama</b> before crossing to Lanka.</li>
+                        <li><span class="label">Architecture:</span> Famous for its <b>long corridors (over 1,200 pillars)</b>.</li>
+                        <li><span class="label">Festivals:</span> <b>Maha Shivaratri, Arudhra Darshan</b>.</li>
+                        <li><span class="label">Interesting fact:</span> Contains <b>22 holy wells (Teerthams)</b> where pilgrims take sacred dips.</li>
+                    </ul>`
+            },
+            {
+                id: 12,
+                name: "Grishneshwar, Maharashtra",
+                image: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Grishneshwar_temple_in_Aurangabad_district.jpg",
+                popupImage: "Images/grishneshwar_map.png",
+                mapLink: "https://maps.app.goo.gl/VX6LjWsXDmj2GbzPA",
+                websiteLink: "https://grishneshwar.in/",
+                youtubeLink: "https://www.youtube.com/embed/_jhCvRQsTMg?si=_lMd1x0d2tCIc2mw",
+                streetView: "https://maps.app.goo.gl/ZHkXzVda6WVD5F5i8/",
+                about: `
+                    <div class="description">Located near the famous Ellora Caves in Aurangabad, Grishneshwar Temple is the twelfth and final Jyotirlinga. This relatively small but architecturally beautiful temple follows the South Indian style of construction and holds special significance as it's one of the few temples where women are permitted to perform abhishek (ritual bathing) of the Shiva Linga.</div>
+                    <ul>
+                        <li><span class="label">Location:</span> Located near <b>Ellora caves</b> in Aurangabad.</li>
+                        <li><span class="label">Architecture:</span> South Indian style with red stone and intricate carvings.</li>
+                        <li><span class="label">Special:</span> The <b>12th and last Jyotirlinga</b> in the list.</li>
+                        <li><span class="label">Festivals:</span> <b>Maha Shivaratri</b>, Shravan Mondays.</li>
+                        <li><span class="label">Interesting fact:</span> Women are allowed to perform <b>abhishek on the Shivalinga</b> here.</li>
+                    </ul>`
+            }
+        ];
+
+        // DOM elements
+        const carousel = document.getElementById('cards-carousel');
+        const dotsContainer = document.getElementById('dots-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const popupOverlay = document.getElementById('popup-overlay');
+        const popupTitle = document.getElementById('popup-title');
+        const popupBody = document.getElementById('popup-body');
+        const popupClose = document.getElementById('popup-close');
+
+        let currentIndex = 0;
+
+        // Create cards for each Jyotirlinga
+        jyotirlingas.forEach((jyotirlinga, index) => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="${jyotirlinga.image}" alt="${jyotirlinga.name}" class="card-image">
+                        <div class="card-text-overlay">
+                            <h2>${jyotirlinga.name}</h2>
+                            <p>Click to explore</p>
+                        </div>
+                    </div>
+                    
+                    <div class="card-back">
+                        <div class="back-content" style="background-image: url('${jyotirlinga.image}'); background-size: cover; background-position: center;">
+                            <h2>${jyotirlinga.name}</h2>
+                            <div class="about-text">
+                                ${jyotirlinga.about}
+                            </div>
+                            
+                            <div class="icons-container">
+                                <a href="#" class="icon map-icon" title="View on Map" data-type="map" data-link="${jyotirlinga.mapLink}">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </a>
+                                <a href="#" class="icon link-icon" title="Official Website" data-type="website" data-link="${jyotirlinga.websiteLink}">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                                <a href="#" class="icon youtube-icon" title="Watch Video" data-type="youtube" data-link="${jyotirlinga.youtubeLink}">
+                                    <i class="fas fa-video"></i>
+                                </a>
+                                <a href="#" class="icon vr-icon" title="Google 360 view" data-type="streetview" data-link="${jyotirlinga.streetView}">
+                                    <i class="fas fa-street-view"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            carousel.appendChild(card);
+            
+            // Create dots for navigation
+            const dot = document.createElement('div');
+            dot.className = 'dot';
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+            dotsContainer.appendChild(dot);
+            
+            // Add event listener for card click (flip)
+            card.addEventListener('click', function(e) {
+                // Don't flip if clicking on an icon link
+                if (!e.target.closest('.icon')) {
+                    card.classList.toggle('flipped');
+                }
+            });
+
+            // Add event listeners for icons
+            const icons = card.querySelectorAll('.icon');
+            icons.forEach(icon => {
+                icon.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const type = this.getAttribute('data-type');
+                    const link = this.getAttribute('data-link');
+                    const name = jyotirlinga.name;
+                    
+                    showPopup(type, link, name);
+                });
+            });
+        });
+
+        // Popup functions
+        function showPopup(type, link, name) {
+            let title = '';
+            let content = '';
+            
+            switch(type) {
+                case 'map':
+                    title = `Map View - ${name}`;
+                    // Find the current jyotirlinga to get its image
+                    const currentJyotirlinga = jyotirlingas.find(j => j.name === name);
+                    content = `
+                        <div class="image-container">
+                            <img src="${currentJyotirlinga.popupImage}" alt="${name}" class="popup-image" id="map-popup-image">
+                            <div class="zoom-controls">
+                                <button class="zoom-btn" onclick="zoomIn()" title="Zoom In">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                                <button class="zoom-btn" onclick="zoomOut()" title="Zoom Out">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                            </div>
+                            <p style="font-style: italic; color: #666; margin-top: 0.5rem;">${name}</p>
+                        </div>
+                        <p style="margin-top: 1rem;">You can also <a href="${link}" target="_blank">open the google map in a new tab</a>.</p>
+                    `;
+                    break;
+                    
+                case 'website':
+                    title = `Official Website - ${name}`;
+                    content = `
+                        <p>Visit the official website of ${name}:</p>
+                        <div style="text-align: center; margin: 2rem 0;">
+                            <a href="${link}" target="_blank" style="display: inline-block; padding: 12px 24px; background: #4285F4; color: white; text-decoration: none; border-radius: 6px; font-weight: 600;">
+                                <i class="fas fa-external-link-alt" style="margin-right: 8px;"></i>Visit Official Website
+                            </a>
+                        </div>
+                        <p>This will open the official website in a new browser tab.</p>
+                    `;
+                    break;
+                    
+                case 'youtube':
+                    title = `Video - ${name}`;
+                    content = `
+                        <iframe width="100%" height="400" src="${link}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    `;
+                    break;
+                    
+                case 'streetview':
+                    title = `360 view - ${name}`;
+                    const embedUrl = buildStreetViewEmbedUrl(link);
+                    if (embedUrl) {
+                        content = `
+                            <p>Explore ${name} with 360 view:</p>
+                            <iframe src="${embedUrl}" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <p style="margin-top: 1rem;">If the view doesn't load, you can <a href="${link}" target="_blank">open 360 view in a new tab</a>.</p>
+                        `;
+                    } else {
+                        content = `
+                            <div style="text-align: center; margin: 1rem 0;">
+                                <a href="${link}" target="_blank" style="display: inline-block; padding: 12px 20px; background: #4285F4; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600;">
+                                    <i class="fas fa-street-view" style="margin-right: 8px;"></i>Open 360 view
+                                </a>
+                            </div>
+                        `;
+                    }
+                    break;
+            }
+            
+            popupTitle.textContent = title;
+            popupBody.innerHTML = content;
+            popupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Add drag listeners if it's a map popup
+            if (type === 'map') {
+                setTimeout(addDragListeners, 100); // Small delay to ensure DOM is ready
+            }
+        }
+
+        // Build a Google Maps Embed API Street View URL from a link that may contain coordinates
+        function buildStreetViewEmbedUrl(originalLink) {
+            if (!GOOGLE_MAPS_EMBED_API_KEY) return null;
+
+            // Try to extract viewpoint=lat,lng
+            try {
+                const url = new URL(originalLink);
+                const viewpoint = url.searchParams.get('viewpoint');
+                if (viewpoint) {
+                    // viewpoint format: "lat,lng"
+                    const [latStr, lngStr] = viewpoint.split(',');
+                    const lat = parseFloat(latStr);
+                    const lng = parseFloat(lngStr);
+                    if (!isNaN(lat) && !isNaN(lng)) {
+                        // Optional: you can add heading, pitch, fov as needed
+                        return `https://www.google.com/maps/embed/v1/streetview?key=${GOOGLE_MAPS_EMBED_API_KEY}&location=${lat},${lng}&fov=80&pitch=0&heading=0`;
+                    }
+                }
+
+                // Some entries may be maps.app.goo.gl short links; we can't reliably parse without resolving
+                // In that case return null to fall back to opening in a new tab
+                return null;
+            } catch (e) {
+                return null;
+            }
+        }
+
+
+        // Event listeners for popup
+        popupClose.addEventListener('click', closePopup);
+        popupOverlay.addEventListener('click', function(e) {
+            if (e.target === popupOverlay) {
+                closePopup();
+            }
+        });
+
+        // Close popup with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && popupOverlay.classList.contains('active')) {
+                closePopup();
+            }
+        });
+
+        // Navigation functions
+        function goToSlide(index) {
+            currentIndex = index;
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Update active dot
+            document.querySelectorAll('.dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % jyotirlingas.length;
+            goToSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + jyotirlingas.length) % jyotirlingas.length;
+            goToSlide(currentIndex);
+        }
+
+        // Event listeners for navigation buttons
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') prevSlide();
+            if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Zoom functionality for map popup
+        let currentZoom = 1;
+        const maxZoom = 3;
+        const minZoom = 0.5;
+        let isDragging = false;
+        let startX, startY, currentX = 0, currentY = 0;
+
+        function zoomIn() {
+            const image = document.getElementById('map-popup-image');
+            if (image && currentZoom < maxZoom) {
+                currentZoom += 0.5;
+                image.style.transform = `scale(${currentZoom}) translate(${currentX}px, ${currentY}px)`;
+                image.style.transformOrigin = 'center';
+                if (currentZoom > 1) {
+                    image.classList.add('zoomable');
+                    image.style.cursor = 'grab';
+                }
+            }
+        }
+
+        function zoomOut() {
+            const image = document.getElementById('map-popup-image');
+            if (image && currentZoom > minZoom) {
+                currentZoom -= 0.5;
+                if (currentZoom <= 1) {
+                    currentX = 0;
+                    currentY = 0;
+                    image.style.cursor = 'default';
+                    image.classList.remove('zoomable');
+                }
+                image.style.transform = `scale(${currentZoom}) translate(${currentX}px, ${currentY}px)`;
+                image.style.transformOrigin = 'center';
+            }
+        }
+
+        // Add drag functionality
+        function addDragListeners() {
+            const image = document.getElementById('map-popup-image');
+            if (!image) return;
+
+            image.addEventListener('mousedown', startDrag);
+            image.addEventListener('mousemove', drag);
+            image.addEventListener('mouseup', endDrag);
+            image.addEventListener('mouseleave', endDrag);
+
+            // Touch events for mobile
+            image.addEventListener('touchstart', startDragTouch);
+            image.addEventListener('touchmove', dragTouch);
+            image.addEventListener('touchend', endDrag);
+        }
+
+        function startDrag(e) {
+            if (currentZoom <= 1) return;
+            isDragging = true;
+            startX = e.clientX - currentX;
+            startY = e.clientY - currentY;
+            e.preventDefault();
+        }
+
+        function startDragTouch(e) {
+            if (currentZoom <= 1) return;
+            isDragging = true;
+            const touch = e.touches[0];
+            startX = touch.clientX - currentX;
+            startY = touch.clientY - currentY;
+            e.preventDefault();
+        }
+
+        function drag(e) {
+            if (!isDragging || currentZoom <= 1) return;
+            currentX = e.clientX - startX;
+            currentY = e.clientY - startY;
+            updateImageTransform();
+            e.preventDefault();
+        }
+
+        function dragTouch(e) {
+            if (!isDragging || currentZoom <= 1) return;
+            const touch = e.touches[0];
+            currentX = touch.clientX - startX;
+            currentY = touch.clientY - startY;
+            updateImageTransform();
+            e.preventDefault();
+        }
+
+        function endDrag() {
+            isDragging = false;
+        }
+
+        function updateImageTransform() {
+            const image = document.getElementById('map-popup-image');
+            if (image) {
+                image.style.transform = `scale(${currentZoom}) translate(${currentX}px, ${currentY}px)`;
+            }
+        }
+
+        // Reset zoom when popup is closed
+        function closePopup() {
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
+            // Reset zoom and drag position
+            currentZoom = 1;
+            currentX = 0;
+            currentY = 0;
+            isDragging = false;
+            const image = document.getElementById('map-popup-image');
+            if (image) {
+                image.style.transform = 'scale(1) translate(0px, 0px)';
+                image.style.cursor = 'default';
+                image.classList.remove('zoomable', 'dragging');
+            }
+        }
+    </script>
+</body>
+</html>
